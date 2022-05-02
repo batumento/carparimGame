@@ -12,7 +12,6 @@ public class LevelManager : MonoBehaviour
     }
     public void WhoGameOpen(string whoGame)
     {
-        Debug.Log(whoGame);
         PlayerPrefs.SetString("whoGame",whoGame);
         SceneManager.LoadScene(2);
     }

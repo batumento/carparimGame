@@ -45,6 +45,6 @@ public class PlayerManager : MonoBehaviour
 
     private void FireActive()
     {
-       GameObject bullet= Instantiate(bullets[Random.RandomRange(0, bullets.Length)],bulletTransform.position, bulletTransform.rotation) as GameObject;
+       GameObject bullet= Instantiate(bullets[Random.Range(0, bullets.Length)],bulletTransform.position, bulletTransform.rotation) as GameObject;
     }
 }
