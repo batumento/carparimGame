@@ -7,10 +7,21 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject startImage;
     [SerializeField] private Text questionText;
+    [SerializeField] private Text trueQuestion1,trueQuestion2,trueQuestion3;
+    [SerializeField] private Text trueText, falseText, scoreText;
 
     private string whoGame;
     private int firstMultiplier;
     private int secondMultiplier;
+    private int trueValue;
+    private int falseValue1;
+    private int falseValue2;
+    private int trueCounter;
+    private int falseCounter;
+    private int scoreCounter;
+    
+
+
     void Start()
     {
         if (PlayerPrefs.HasKey("whoGame"))
@@ -92,6 +103,58 @@ public class GameManager : MonoBehaviour
         {
             questionText.text = secondMultiplier.ToString() + "x" + firstMultiplier.ToString();
         }
+        trueValue = firstMultiplier * secondMultiplier;
+        PrintResult();
+    }
 
+    void PrintResult()
+    {
+        falseValue1 = trueValue + Random.Range(2, 8);
+        if (trueValue > 10 )
+        {
+            falseValue2 = trueValue - Random.Range(2, 8);
+        }
+        else
+        {
+            falseValue2 = Mathf.Abs(trueValue - Random.Range(2, 5));
+        }
+        int randomValue = Random.Range(1,100);
+        if (randomValue <=33)
+        {
+            trueQuestion1.text = trueValue.ToString();
+            trueQuestion2.text = falseValue1.ToString();
+            trueQuestion3.text = falseValue2.ToString();
+        }
+        else if (randomValue <= 66)
+        {
+            trueQuestion2.text = trueValue.ToString();
+            trueQuestion1.text = falseValue2.ToString();
+            trueQuestion3.text = falseValue1.ToString();
+        }
+        else
+        {
+            trueQuestion3.text = trueValue.ToString();
+            trueQuestion1.text = falseValue1.ToString();
+            trueQuestion2.text = falseValue2.ToString();
+        }
+    }
+    public void ResultChecked(int resultText)
+    {
+        if (resultText == trueValue)
+        {
+            Debug.Log("Nice");
+            trueCounter++;
+            scoreCounter += 10;
+        }
+        else
+        {
+            Debug.Log("Fucking");
+            falseCounter++;
+            
+        }
+        trueText.text = trueCounter.ToString() + " Doðru";
+        falseText.text = falseCounter.ToString() + " Yanlýþ";
+        scoreText.text = scoreCounter.ToString() + " Puan";
+        PrintQuestion();
     }
 }

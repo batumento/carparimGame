@@ -5,13 +5,7 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
     private int speed = 20;
-    private void Start()
-    {
-        if(this.gameObject != null)
-        {
-            Destroy(gameObject,1f);
-        }
-    }
+   
     private void Update()
     {
         BulletFire();

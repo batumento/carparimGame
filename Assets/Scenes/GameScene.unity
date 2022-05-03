@@ -465,8 +465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 318057895}
   - component: {fileID: 318057896}
-  - component: {fileID: 318057898}
-  - component: {fileID: 318057897}
   m_Layer: 0
   m_Name: sagSonuc
   m_TagString: Untagged
@@ -485,10 +483,9 @@ Transform:
   m_LocalPosition: {x: 3.05, y: 1.7668598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1045442182}
   - {fileID: 1974367969}
   m_Father: {fileID: 1180839756}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &318057896
 SpriteRenderer:
@@ -541,34 +538,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &318057897
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318057894}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.685
---- !u!114 &318057898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318057894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &366817895
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10+25
+  m_Text: '*'
 --- !u!222 &366817898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -680,7 +649,7 @@ RectTransform:
   m_Children:
   - {fileID: 714468939}
   m_Father: {fileID: 1749183914}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1111,6 +1080,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startImage: {fileID: 1229215538}
   questionText: {fileID: 2146460259}
+  trueQuestion1: {fileID: 714468940}
+  trueQuestion2: {fileID: 1104116204}
+  trueQuestion3: {fileID: 366817897}
+  trueText: {fileID: 430593403}
+  falseText: {fileID: 548357036}
+  scoreText: {fileID: 538867383}
 --- !u!1 &508387961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 645318997}
   - component: {fileID: 645318998}
+  - component: {fileID: 645318999}
+  - component: {fileID: 645319000}
   m_Layer: 0
   m_Name: ortaDaire
   m_TagString: Untagged
@@ -1369,10 +1346,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645318996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8450675, y: 1.7668598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2110024506}
+  m_Father: {fileID: 1180839756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &645318998
@@ -1426,6 +1403,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &645318999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645318996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &645319000
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645318996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.795
 --- !u!1 &714468938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10+25
+  m_Text: '*'
 --- !u!222 &714468941
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1642,7 +1647,7 @@ RectTransform:
   m_Children:
   - {fileID: 1104116203}
   m_Father: {fileID: 2110024506}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2038,6 +2043,8 @@ GameObject:
   m_Component:
   - component: {fileID: 980681077}
   - component: {fileID: 980681078}
+  - component: {fileID: 980681079}
+  - component: {fileID: 980681080}
   m_Layer: 0
   m_Name: solDaire
   m_TagString: Untagged
@@ -2053,11 +2060,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980681076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.45, y: 1.7668598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1749183914}
-  m_RootOrder: 0
+  m_Father: {fileID: 1180839756}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &980681078
 SpriteRenderer:
@@ -2110,6 +2117,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &980681079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980681076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &980681080
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980681076}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.795
 --- !u!1 &995050440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2230,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1045442182}
   - component: {fileID: 1045442183}
+  - component: {fileID: 1045442184}
+  - component: {fileID: 1045442185}
   m_Layer: 0
   m_Name: sagDaire
   m_TagString: Untagged
@@ -2210,11 +2247,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045442181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.017, y: -0.01, z: 0}
+  m_LocalPosition: {x: 3.067, y: 1.7568598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 318057895}
-  m_RootOrder: 0
+  m_Father: {fileID: 1180839756}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1045442183
 SpriteRenderer:
@@ -2267,6 +2304,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1045442184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045442181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1045442185
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045442181}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.79
 --- !u!1 &1057477718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,7 +2515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10+25
+  m_Text: '*'
 --- !u!222 &1104116205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2486,6 +2551,9 @@ Transform:
   m_LocalPosition: {x: -0.69956, y: -0.073314, z: -643.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 645318997}
+  - {fileID: 1045442182}
+  - {fileID: 980681077}
   - {fileID: 2110024506}
   - {fileID: 318057895}
   - {fileID: 1749183914}
@@ -3058,8 +3126,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1749183914}
   - component: {fileID: 1749183915}
-  - component: {fileID: 1749183917}
-  - component: {fileID: 1749183916}
   m_Layer: 0
   m_Name: solSonuc
   m_TagString: Untagged
@@ -3078,10 +3144,9 @@ Transform:
   m_LocalPosition: {x: -1.45, y: 1.7668598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 980681077}
   - {fileID: 374553695}
   m_Father: {fileID: 1180839756}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1749183915
 SpriteRenderer:
@@ -3134,34 +3199,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1749183916
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749183913}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.67
---- !u!114 &1749183917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749183913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1935694171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3297,7 @@ RectTransform:
   m_Children:
   - {fileID: 366817896}
   m_Father: {fileID: 318057895}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3504,8 +3541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2110024506}
   - component: {fileID: 2110024507}
-  - component: {fileID: 2110024509}
-  - component: {fileID: 2110024508}
   m_Layer: 0
   m_Name: ortaSonuc
   m_TagString: Untagged
@@ -3524,10 +3559,9 @@ Transform:
   m_LocalPosition: {x: 0.8350675, y: 1.7668598, z: 714.6783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 645318997}
   - {fileID: 814927715}
   m_Father: {fileID: 1180839756}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2110024507
 SpriteRenderer:
@@ -3580,34 +3614,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2110024508
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110024505}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.68
---- !u!114 &2110024509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110024505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8840948d612c2ac4ca68c36cdc8c7ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2146460257
 GameObject:
   m_ObjectHideFlags: 0
