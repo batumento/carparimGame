@@ -240,7 +240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &32269433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1079,6 +1079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startImage: {fileID: 1229215538}
+  trueImage: {fileID: 508387961}
+  falseImage: {fileID: 32269432}
   questionText: {fileID: 2146460259}
   trueQuestion1: {fileID: 714468940}
   trueQuestion2: {fileID: 1104116204}
@@ -1103,7 +1105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &508387962
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2860,6 +2862,7 @@ MonoBehaviour:
   - {fileID: 6617742609648623656, guid: d8086aeb53531604390cea3e79456a0e, type: 3}
   - {fileID: 6617742609648623656, guid: ab5141cdc16fdac4aa5ceeffb0dcd563, type: 3}
   - {fileID: 6617742609648623656, guid: 9b1122aa85d8fbd42b16faa9a7552b7a, type: 3}
+  rotateChange: 0
 --- !u!1 &1460787609
 GameObject:
   m_ObjectHideFlags: 0

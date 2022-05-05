@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject startImage;
+    [SerializeField] private GameObject trueImage;
+    [SerializeField] private GameObject falseImage;
     [SerializeField] private Text questionText;
     [SerializeField] private Text trueQuestion1,trueQuestion2,trueQuestion3;
     [SerializeField] private Text trueText, falseText, scoreText;
@@ -20,10 +22,23 @@ public class GameManager : MonoBehaviour
     private int falseCounter;
     private int scoreCounter;
     
+    PlayerManager playerManager;
 
+    private void Awake()
+    {
+        playerManager = Object.FindObjectOfType<PlayerManager>();
+    }
 
     void Start()
     {
+        trueCounter = 0;
+        falseCounter = 0;
+        scoreCounter = 0;
+
+        trueImage.GetComponent<RectTransform>().localScale = Vector3.zero;
+        falseImage.GetComponent<RectTransform>().localScale = Vector3.zero;
+
+
         if (PlayerPrefs.HasKey("whoGame"))
         {
             this.whoGame = PlayerPrefs.GetString("whoGame");
@@ -41,6 +56,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
+        playerManager.rotateChange = false;
         PrintQuestion();
     }
 
@@ -140,17 +156,19 @@ public class GameManager : MonoBehaviour
     }
     public void ResultChecked(int resultText)
     {
+        trueImage.GetComponent<RectTransform>().localScale = Vector3.zero;
+        falseImage.GetComponent<RectTransform>().localScale = Vector3.zero;
         if (resultText == trueValue)
         {
-            Debug.Log("Nice");
             trueCounter++;
             scoreCounter += 10;
+            trueImage.GetComponent<RectTransform>().DOScale(1, 0.1f);
         }
         else
         {
-            Debug.Log("Fucking");
             falseCounter++;
-            
+            falseImage.GetComponent<RectTransform>().DOScale(1, 0.1f);
+
         }
         trueText.text = trueCounter.ToString() + " Doðru";
         falseText.text = falseCounter.ToString() + " Yanlýþ";

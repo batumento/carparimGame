@@ -13,10 +13,20 @@ public class PlayerManager : MonoBehaviour
     private float fireDuraction = 200;
     private float fireTime = 0;
     private float angle;
+    public bool rotateChange = false;
+
+
+    private void Start()
+    {
+        rotateChange = true;
+    }
 
     void Update()
     {
-        RotateChange();
+        if (!rotateChange)
+        {
+            RotateChange();
+        }
     }
 
     void RotateChange()
