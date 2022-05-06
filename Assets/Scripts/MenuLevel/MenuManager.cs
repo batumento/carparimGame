@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonClip;
     void Start()
     {
         menuPanel.GetComponent<CanvasGroup>().DOFade(1,1f);
@@ -15,6 +17,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartLevelMenu()
     {
+        audioSource.PlayOneShot(buttonClip);
         SceneManager.LoadScene(1);
     }
     public void Settings()
@@ -23,6 +26,7 @@ public class MenuManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        audioSource.PlayOneShot(buttonClip);
         Application.Quit();
     }
 }

@@ -7,7 +7,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform gun;
     [SerializeField] private Transform bulletTransform;
     [SerializeField] private GameObject[] bullets;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bulletClip;
 
     private int rotateSpeed = 10;
     private float fireDuraction = 200;
@@ -55,6 +56,7 @@ public class PlayerManager : MonoBehaviour
 
     private void FireActive()
     {
-       GameObject bullet= Instantiate(bullets[Random.Range(0, bullets.Length)],bulletTransform.position, bulletTransform.rotation) as GameObject;
+        audioSource.PlayOneShot(bulletClip);
+        GameObject bullet = Instantiate(bullets[Random.Range(0, bullets.Length)],bulletTransform.position, bulletTransform.rotation) as GameObject;
     }
 }

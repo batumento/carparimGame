@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject levelPanel;
+    [SerializeField] private AudioClip buttonClip;
     void Start()
     {
 
     }
     public void WhoGameOpen(string whoGame)
     {
+        audioSource.PlayOneShot(buttonClip);
         PlayerPrefs.SetString("whoGame",whoGame);
         SceneManager.LoadScene(2);
     }
 
     public void AgainMenu()
     {
+        audioSource.PlayOneShot(buttonClip);
         SceneManager.LoadScene(0);
     }
     public void StartLevelPanel()
