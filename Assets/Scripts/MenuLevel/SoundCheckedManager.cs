@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SoundCheckedManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SoundOpen()
     {
-        
+        PlayerPrefs.SetInt("soundStatus", 1);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SoundClosed()
     {
-        
+        PlayerPrefs.SetInt("soundStatus", 0);
     }
 }
